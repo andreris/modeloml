@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primera Web Simple</title>
+    <style>
+        /* CSS: El diseño y los colores */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: #1e1e1e;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-width: 400px;
+        }
+
+        h1 { color: #bb86fc; }
+
+        p { color: #b0b0b0; line-height: 1.6; }
+
+        button {
+            background-color: #03dac6;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        button:hover {
+            background-color: #018786;
+            transform: scale(1.05);
+        }
+
+        #mensaje {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #cf6679;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>¡Hola, Mundo!</h1>
+        <p>Esta es una página web básica construida con HTML, CSS y un poquito de magia de JS.</p>
+        
+        <button onclick="saludar()">Haz clic aquí</button>
+        
+        <div id="mensaje"></div>
+    </div>
+
+    <script>
+        // JavaScript: La lógica y la interacción
+        function saludar() {
+            const display = document.getElementById('mensaje');
+            display.innerText = "¡Acabas de ejecutar tu primer script en el navegador! 🚀";
+            
+            // Un pequeño efecto de consola
+            console.log("El usuario hizo clic en el botón.");
+        }
+    </script>
+</body>
+</html>
